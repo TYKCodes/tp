@@ -1,17 +1,16 @@
 package bookface.logic.commands;
 
+import static bookface.commons.util.CollectionUtil.requireAllNonNull;
+import static bookface.model.Model.PREDICATE_SHOW_ALL_PERSONS;
+
 import java.util.List;
 
-import bookface.model.Model;
-import bookface.logic.commands.exceptions.CommandException;
-import bookface.commons.core.index.Index;
 import bookface.commons.core.Messages;
-import bookface.model.person.Remark;
+import bookface.commons.core.index.Index;
+import bookface.logic.commands.exceptions.CommandException;
+import bookface.model.Model;
 import bookface.model.person.Person;
-
-import static bookface.commons.util.CollectionUtil.requireAllNonNull;
-import static bookface.logic.parser.CliSyntax.PREFIX_REMARK;
-import static bookface.model.Model.PREDICATE_SHOW_ALL_PERSONS;
+import bookface.model.person.Remark;
 
 /**
  * Changes the remark of an existing person in the address book

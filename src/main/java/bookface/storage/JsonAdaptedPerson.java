@@ -14,8 +14,8 @@ import bookface.model.person.Email;
 import bookface.model.person.Name;
 import bookface.model.person.Person;
 import bookface.model.person.Phone;
-import bookface.model.tag.Tag;
 import bookface.model.person.Remark;
+import bookface.model.tag.Tag;
 
 /**
  * Jackson-friendly version of {@link Person}.

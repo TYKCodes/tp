@@ -2,6 +2,10 @@ package bookface.model.person;
 
 import static java.util.Objects.requireNonNull;
 
+/**
+ * Represents a Person's remark in the address book.
+ * Guarantees: immutable; is always valid
+ */
 public class Remark {
     public final String value;
 
@@ -19,7 +23,7 @@ public class Remark {
     public boolean equals(Object other) {
         return other == this
                 || (other instanceof Remark
-                && value.equals (((Remark) other).value));
+                && value.equals(((Remark) other).value));
     }
 
     @Override
