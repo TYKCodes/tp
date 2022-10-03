@@ -21,6 +21,7 @@ import bookface.model.person.Email;
 import bookface.model.person.Name;
 import bookface.model.person.Person;
 import bookface.model.person.Phone;
+import bookface.model.person.Remark;
 import bookface.model.tag.Tag;
 
 /**
@@ -92,9 +93,10 @@ public class EditCommand extends Command {
         Name updatedName = editPersonDescriptor.getName().orElse(personToEdit.getName());
         Phone updatedPhone = editPersonDescriptor.getPhone().orElse(personToEdit.getPhone());
         Email updatedEmail = editPersonDescriptor.getEmail().orElse(personToEdit.getEmail());
+        Remark updatedRemark = personToEdit.getRemark();
         Set<Tag> updatedTags = editPersonDescriptor.getTags().orElse(personToEdit.getTags());
 
-        return new Person(updatedName, updatedPhone, updatedEmail, updatedTags);
+        return new Person(updatedName, updatedPhone, updatedEmail, updatedRemark, updatedTags);
     }
 
     @Override

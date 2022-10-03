@@ -16,6 +16,7 @@ import bookface.model.person.Email;
 import bookface.model.person.Name;
 import bookface.model.person.Person;
 import bookface.model.person.Phone;
+import bookface.model.person.Remark;
 import bookface.model.tag.Tag;
 
 /**
@@ -51,9 +52,10 @@ public class AddCommandParser implements Parser<AddUserCommand> {
         Name name = ParserUtil.parseName(argMultimap.getValue(PREFIX_NAME).get());
         Phone phone = ParserUtil.parsePhone(argMultimap.getValue(PREFIX_PHONE).get());
         Email email = ParserUtil.parseEmail(argMultimap.getValue(PREFIX_EMAIL).get());
+        Remark remark = new Remark("");
         Set<Tag> tagList = ParserUtil.parseTags(argMultimap.getAllValues(PREFIX_TAG));
 
-        Person person = new Person(name, phone, email, tagList);
+        Person person = new Person(name, phone, email, remark, tagList);
 
         if (keyWord.equals("user")) {
             return new AddUserCommand(person);

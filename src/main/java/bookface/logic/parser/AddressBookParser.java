@@ -12,6 +12,7 @@ import bookface.logic.commands.EditCommand;
 import bookface.logic.commands.ExitCommand;
 import bookface.logic.commands.FindCommand;
 import bookface.logic.commands.HelpCommand;
+import bookface.logic.commands.RemarkCommand;
 import bookface.logic.commands.ListUsersCommand;
 import bookface.logic.parser.exceptions.ParseException;
 
@@ -56,6 +57,9 @@ public class AddressBookParser {
 
         case FindCommand.COMMAND_WORD:
             return new FindCommandParser().parse(arguments);
+
+        case RemarkCommand.COMMAND_WORD:
+            return new RemarkCommandParser().parse(arguments);
 
         case ListUsersCommand.COMMAND_WORD:
             return new ListCommandParser().parse(arguments);
